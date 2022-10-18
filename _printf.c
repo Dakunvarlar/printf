@@ -33,7 +33,9 @@ int _printf(const char *format, ...)
 			p++;
 		}
 		p = get_width(p, &params, ap);
-		p = det_precision(p, &params, ap);
+		p = get_precision(p, &params, ap);
+		p = (get_modifier(p, &params))
+			p++;
 		if (!get_specifier(p))
 			sum += print_form_to(start, p,
 					params.l_modifier || params.h_modifier ? p - 1 : 0);
