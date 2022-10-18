@@ -9,7 +9,7 @@
 int print_hex(va_list ap, params_t *params)
 {
 	unsigned long int l;
-	int c;
+	int c = 0;
 	char *str;
 
 	if (params->l_modifier)
@@ -71,7 +71,7 @@ int print_binary(va_list ap, params_t *params)
 	int c = 0;
 
 	if (params->hashtag_flag && n)
-		*--str == '0';
+		*--str = '0';
 	params->unsign = 1;
 	return (c += print_number(str, params));
 }
