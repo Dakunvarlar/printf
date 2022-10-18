@@ -51,7 +51,7 @@ typedef struct parameters
 
 	unsigned int h_modifier		: 1;
 	unsigned int l_modifier		: 1;
-}params_t;
+} params_t;
 
 /**
  * struct specifier - Struct token
@@ -63,7 +63,7 @@ typedef struct specifier
 {
 	char *specifier;
 	int (*f)(va_list, params_t *);
-}specifier_t;
+} specifier_t;
 
 /* _put.c module */
 int _puts(char *str);
